@@ -324,3 +324,12 @@ class MakeRealistic:
         self.rotate_label(angle=270)
 
         return self.label
+
+img = cv2.imread('/home/pooja/Documents/ex1.png') #link the path to the image
+
+a = MakeRealistic(img)
+modified = a.run()
+modified = modified/255
+cv2.imshow('mo',modified)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
