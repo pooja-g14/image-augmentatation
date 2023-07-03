@@ -325,7 +325,7 @@ class MakeRealistic:
 
         return self.label
 
-img = cv2.imread('/home/pooja/Documents/ex1.png') #link the path to the image
+img = cv2.imread('/home/pooja/XOSightInternship/ex1.png') #link the path to the image
 
 a = MakeRealistic(img)
 modified = a.run()
