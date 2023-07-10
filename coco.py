@@ -331,6 +331,6 @@ for i in range (0, len(images)):
   modified = a.run()
   modified = modified/255
   cv2.imwrite("ed{0}.jpg".format(i), modified)
-  cv2.imshow(modified)
+  cv2.imshow('mo',modified)
   cv2.waitKey(0)
   cv2.destroyAllWindows()
