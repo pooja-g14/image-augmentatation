@@ -325,7 +325,7 @@ class MakeRealistic:
 
         return self.label
 
-img = cv2.imread('image-augmentation/ex1.png') #link the path to the image
+img = cv2.imread('ex1.png') #link the path to the image
 
 a = MakeRealistic(img)
 modified = a.run()
