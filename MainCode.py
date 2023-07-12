@@ -329,7 +329,7 @@ images = [cv2.imread(file) for file in glob.glob("/home/ubuntu/data/dataset/Imag
 for i in range (0, 1 + len(images)):
     a = MakeRealistic(images[i])
     modified = a.run()
-    cv2.imwrite("/home/ubuntu/data/dataset/Image_Augmentation/Augmented_Images/Augmented{0}.jpg".format(i), modified)
+    cv2.imwrite("/home/ubuntu/data/dataset/Image_Augmentation/Augmented_Images/Augmented{0}.png".format(i), modified)
     #modified = modified/255
     #cv2.imshow('mo',modified)
     #cv2.waitKey(0)
