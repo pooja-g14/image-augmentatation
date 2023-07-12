@@ -326,7 +326,7 @@ class MakeRealistic:
         return self.label
 
 images = [cv2.imread(file) for file in glob.glob("/home/ubuntu/data/dataset/Image_Augmentation/Train_Images/*/RCImage0001.png")]
-for i in range (0, 1 + len(images)):
+for i in range (0, len(images)):
     a = MakeRealistic(images[i])
     modified = a.run()
     cv2.imwrite("/home/ubuntu/data/dataset/Image_Augmentation/Augmented_Images/Augmented{0}.png".format(i), modified)
