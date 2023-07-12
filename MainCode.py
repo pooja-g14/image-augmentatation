@@ -325,12 +325,12 @@ class MakeRealistic:
 
         return self.label
 
-images = [cv2.imread(file) for file in glob.glob("/home/pooja/XOSightInternship/COCOTest/Temp/*.jpg")]
-for i in range (0, len(images)):
-  a = MakeRealistic(images[i])
-  modified = a.run()
-  modified = modified/255
-  cv2.imwrite("ed{0}.jpg".format(i), modified)
-  cv2.imshow('mo',modified)
-  cv2.waitKey(0)
-  cv2.destroyAllWindows()
+images = [cv2.imread(file) for file in glob.glob("/home/ubuntu/data/dataset/Image_Augmentation/Train_Images/*/RCImage0001.png")]
+for i in range (0, 1 + len(images)):
+    a = MakeRealistic(images[i])
+    modified = a.run()
+    cv2.imwrite("/home/ubuntu/data/dataset/Image_Augmentation/Augmented_Images/Augmented{0}.jpg".format(i), modified)
+    #modified = modified/255
+    #cv2.imshow('mo',modified)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
